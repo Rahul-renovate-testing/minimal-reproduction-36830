@@ -1,13 +1,4 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "baseBranches": [
-    "main"
-  ],
-  "dependencyDashboard": true,
-  "labels": ["dependencies"],
-  "enabledManagers": [
-    "custom.regex"
-  ],
   "customManagers": [
     {
       "customType": "regex",
@@ -30,15 +21,6 @@
     }
   ],
   "packageRules": [
-    {
-      "matchManagers": ["custom.regex"],
-      "separateMinorPatch": true
-    },
-    {
-      "matchManagers": ["custom.regex"],
-      "matchUpdateTypes": ["patch", "pinDigest"],
-      "automerge": true
-    },
     {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["atmoz/sftp", "datadog/agent"],
